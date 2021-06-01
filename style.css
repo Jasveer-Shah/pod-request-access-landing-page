@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
+*{
+    margin:0;
+}
+body {
+    width: 100VW;
+    height: 100vh;
+    background-color: #101824;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: Chivo;
+}
+
+.container {
+  
+    height: 90%;
+    width:98%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #101824;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #101824;;
+}
+.logo {
+   width: 30%; 
+   margin-top: -55px;
+   position: absolute;
+}
+
+.right {
+    display: flex;
+    width: 60%;
+    position: relative;
+}
+
+.main_content {
+    background-color: #101824;
+    color: white;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 160%;
+    z-index: 10;
+    box-sizing: border-box;
+    padding-top: 100px;
+    margin-top: 300px;
+   
+}
+
+h1 {
+    font-size:6rem;
+    width: 80%;
+    font-weight: 100;
+    line-height:120px;
+}
+/* h1 {
+    font-weight: 100;
+    font-size: 1.65rem;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    /* color: #54E6AF; */
+  /* } */
+  
+h1 span {
+    color: rgb(79, 204, 167);
+    font-size:6rem;
+    width: 80%;
+    font-weight: 100;
+    line-height:120px;
+}
+ /* p {
+    font-size: 20px;
+    opacity: 0.7;
+    color: #c2cbe5;
+    line-height: 1.5;
+    width: 40%;
+} */
+p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: #C2CBE5;
+    width: 50%;
+  }
+  
+ 
+.input {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    background-color: rgba(138, 143, 192, 0.23);
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.input input {
+    border:none;
+    outline: none;
+    background: transparent;
+    padding: 40px;
+}
+ .input button {
+     width: 250px;
+     border:none;
+     outline: none;
+     border-radius: 50px;
+     font-weight: bold;
+     background-color: rgb(79, 204, 167);
+ }
+
+.attribution {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 4%;
+    }
+
+
+
+
+.hero_img {
+    height: 90%;
+    width: 100%;
+}
+
+.dots {
+    height:10%;
+    position: absolute;
+    top: 84%;
+    right: 0%;
+    
+}
+
+/* body {
+    font-family: 'Chivo', sans-serif;
+    display: flex;
+    width: 100vw;
+    height:100vh;
+    background-color: rgb(231, 231, 231);
+    justify-content: center;
+    align-items: center;
+    font-family: Chivo;
+    color: white;
+}
+.content_container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: black;
+     height: 80%;
+     width: 70%;
+}
+
+.main_container {
+    display: flex;
+    height:70%;
+    width: 90%;
+    background-color:blue;
+    /* justify-content: center; */
+     /* align-items: flex-end;
+    background-image: url('./assets/image-host.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-right: -10%;
+    position: relative;
+
+}
+
+
+.screen {
+    display: flex;
+    background-color: black;
+    height: 80%;
+    width: 50%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5%;
+   
+    }
+
+    h1 {
+        font-size: 4em;
+        letter-spacing: 2px;
+        margin-bottom: 1em;
+    }
+    h1 span {
+        color:rgb(66, 161, 137);
+    }
+    .B-email {
+        padding:1.4%;
+
+    }
+
+    .B-email p {
+       font-size: 2em;
+    
+ } */ 
