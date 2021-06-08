@@ -4,44 +4,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pd request landing page</title>
+    <title>Pod </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-       <div class="logoimg"><img class="logo" src="./assets/logo.svg" alt=""></div>
+       <div class="main">
+            <img width="120" src="./assets/logo.svg" alt="">
 
-        <div class="left">
-             <div class="main_content">
-                 <h1><span>PUBLISH YOUR PODCATS</span></br>EVERYWHERE.</h1>
+            <div class="main_content">
+                 <h1>PUBLISH YOUR PODCATS
+                 <span>EVERYWHERE.</span></h1>
                   <p>
                       Upload your audio to Pod with a single click.We`ll</br> then
                       distribute your podcast to Spotify. Apple</br>
                       Podcasts. Google Podcasts, Pocket Casts and more!
                   </p>
-
-                <form class="input" action="/Dashboard.html">
-                  <input type="email" placeholder="Email address">
-                  <button>Login</button>
-                </form>
+                    
+                  <div class='form'>
+                    <label for="email">
+                        <input type="email" name="email" id="email"placeholder="Email Address">
+                    </label>
+                    <input type="button" value="Login" onclick='authWithGoogle()'>
+                </div>
+                <!-- <form class="input" >
+                  <!-- <input type="email" placeholder="Email address"> -->
+                  <!-- <button onclick="authWithGoogle()">Login</button>
+                </form> --> -->
 
                 <div class="attribution">
-                    <img class="spotify" src="./assets/spotify.svg" alt="">
-                    <img class="apple" src="./assets/apple-podcast.svg" alt="">
-                    <img  class="google" src="./assets/google-podcasts.svg" alt="">
-                    <img  class="pocket" src="./assets/pocket-casts.svg" alt="">
+                    <img  src="./assets/spotify.svg" alt="">
+                    <img  src="./assets/apple-podcast.svg" alt="">
+                    <img  src="./assets/google-podcasts.svg" alt="">
+                    <img  src="./assets/pocket-casts.svg" alt="">
                 </div>
             </div>
         </div>
  
       
-        <div class="right">
+        <div class="hero">
             <img class="hero_img" src="./assets/image-host.jpg" alt="">
             <img  class="dots" src="./assets/bg-pattern-dots.svg" alt="">
         </div>
 
     </div>
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.6.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.6.5/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDv363WrfCUU8jcKhF2CWYnV9EjhMoM730",
+    authDomain: "podcast-website-c3b5b.firebaseapp.com",
+    projectId: "podcast-website-c3b5b",
+    storageBucket: "podcast-website-c3b5b.appspot.com",
+    messagingSenderId: "194996208046",
+    appId: "1:194996208046:web:b7e4700e34050a0f1e083f",
+    measurementId: "G-VXJZCV53RX"
+  };
+
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+  function authWithGoogle(){
+    var provider = new firebase.auth.GoogleAuthProvider(); 
+    firebase.auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+    {firebase.auth.OAuthCredential} 
+    var credential = result.credential;
+
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+    
+  }
+
+</script>
 </body>
 </html>
 

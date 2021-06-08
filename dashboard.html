@@ -4,31 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload=fetch_featured()>
+<body onload="fetch_all()">
     <div class="container" style="padding: 0px;">
         <div class="sidebar">
+            <img width="80" src="./assets/logo.svg" alt="">
+
              <ul>
-                 <li>Home</li>
-                 <li></li>
-                 <li></li>
+                 <li><a href="/dashboard.html">Home</a></li>
+                 <li>Browse</li>
+                 <li>Library</li>
              </ul>
         </div>
 
         <div class="dashboard_main">
 
-            <div class="featured_container" id="featured"></div>
+            <div id="featured" class="featured__container">
+
+            </div>
 
             <div class="latest">
-
+                   <h2>Latest</h2>
                 <div id="shows">
 
                 </div>
             </div>
         </div>
     </div>
- 
+ <script src="./js/index.js"></script>
+ <!-- <script>
+     fetch_featured();
+ </script> -->
 </body>
 </html>
