@@ -1,4 +1,4 @@
-let bearer_token = "BQDWw2poIn8HLvayRgprpoSdKhs7GKpAldJE6KL9oxA2Zq8lawfIZvWz31ybM1mkOk9kh5IfYpuyv9VoPhzxKVE3wD1kXms3T69LJhKjn4Bx9uZ0FXPxGuCoIN5vCThFDpSc51CJ2n8xxhnntSkj6aALyPOTT78-Oj3LHuo_o7_g1BKzVxKHylYYzZAPrOkjBcDGQYvN60K8ER5NlQ_pePyL5sX1Ds2JPhlrTQznrfLFBbuounxuqute4-NaXBWsuE-A4kj8bJDo2MKFMCxtfRubTqhu0Fb5rstXNP8w";
+let bearer_token = "BQCEuVNKHq7TgsWwbzmNHIwIA19_lSQw6dwycPhiJwhOc0H4V7FUwfQJCxa2HWIQo7hlmsG571DoIPAC_eScfyERh-rR1Faid9_4xY57qELf7VqN5ukazOzln0M95pLBH7P0bdKMakx-X3vKltLTKLOzvS0-Rr4XMxtQctSJtimRnOHsCxXEfbytVVi09WA0Fgu0ySCZpSOYXOyQYGbTc38EUN7PBt2iAAYVfOoNC13tBbesoo_D2rJFyuZzbhUoTokjs8Dw0Af8V7mckRjxJzCHCcrS6C_j7OampaTG";
 
 let url = "https://api.spotify.com/v1/shows";
 let bearer = "Bearer " + bearer_token;
@@ -25,9 +25,7 @@ function fetch_featured(){
             <div>
                <h2>${show.name}</h2>
                <h4>${show.description} </h4>
-               <h4>Don't forget to listen to todaysepisode! </h4>
-               <button>Listen now</button>
-            </div>
+             </div>
 
           </div>
         `
@@ -60,9 +58,7 @@ function fetch_latest(){
          <div>
              <h2>${show.name}</h2>
              <h5>${show.publisher} </h5>
-             <h4>Don't forget to listen to todaysepisode! </h4>
-             <button>Listen now</button>
-        </div>
+          </div>
 
       </div>
     `
@@ -115,7 +111,7 @@ function get_episodes(id){
       'Content-Type':'application/json',
     }
   })
-  .then((data) => {data.json()})
+  .then((data) => { return data.json()})
   .then((data)=> {
     data.items.forEach(episode => {
       let episode_html = `
@@ -144,35 +140,3 @@ function get_episodes(id){
   })
 }
 
-// 2nIvarXvvZcp1cePx69x9N%2C5lY4b5PGOvMuOYOjOVEcb9%2C6xpiit8aJmwDHk1rKdxmri
-
-// function fetch_featured(){
-//     let show_id = "2nIvarXvvZcp1cePx69x9N";
-//     fetch(url+"?ids="+show_id+"&market=US",{
-//         method:"GET",
-//         headers:{
-//             'Authorization':bearer,
-//             'Accept':'application/json',
-//             'Content-Type':'application/json',
-//         }
-//     })
-//     .then((data)=>{return data.json()})
-//     .then((data)=>{
-//         let show = data.shows[0]
-//         let featured_html = `
-//             <div class='featured'>
-//                 <img src='${show.images[1].url}' />
-//                 <div>
-//                     <h2>${show.name}</h2>
-//                     <h4>${show.description}</h4>
-//                     <h4>Don't forget to listen to today's episode!</h3>
-//                     <button>Listen now</button>
-//                 </div>
-//             </div>
-//         `
-//         document.getElementById("featured").innerHTML = featured_html;
-//     })
-//     .catch(console.log)
-// }
-
-///2nIvarXvvZcp1cePx69x9N%2C5lY4b5PGOvMuOYOjOVEcb9%2C6xpiit8aJmwDHk1rKdxmri
