@@ -1,4 +1,4 @@
-let bearer_token = "BQCEuVNKHq7TgsWwbzmNHIwIA19_lSQw6dwycPhiJwhOc0H4V7FUwfQJCxa2HWIQo7hlmsG571DoIPAC_eScfyERh-rR1Faid9_4xY57qELf7VqN5ukazOzln0M95pLBH7P0bdKMakx-X3vKltLTKLOzvS0-Rr4XMxtQctSJtimRnOHsCxXEfbytVVi09WA0Fgu0ySCZpSOYXOyQYGbTc38EUN7PBt2iAAYVfOoNC13tBbesoo_D2rJFyuZzbhUoTokjs8Dw0Af8V7mckRjxJzCHCcrS6C_j7OampaTG";
+let bearer_token = "BQAIaazWoqj8cjTQPw6HPMlK5jA7KHkDqmWOhqxLKVZSjkkhlHjalxkF0NoZSan6IxpXsHNwEIe4TDyqfNa3V3-sY3wk3jnmDGNDSZFnjKurP2pVCwHpfMpb5fGwY6FTIIVlzdAok6tkvWseB__YAyYSoTlo4-KL7WK9FHe5sdYGsIXEm-E7z2hZBanuC0U8XEGc3GOfz-qlMcMdE8hgKuQ5YrR_fa4YxZ7VFvcxwTmeByx2gqpmBGACDvy60XiKgODK-GEYBeWh3tr8J4zoB_3HT0Kkl2IaBObWp3Sl";
 
 let url = "https://api.spotify.com/v1/shows";
 let bearer = "Bearer " + bearer_token;
@@ -139,4 +139,3 @@ function get_episodes(id){
     });
   })
 }
-
